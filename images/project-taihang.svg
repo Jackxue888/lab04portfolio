@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="冬季太行山手机风光摄影集配图">
+  <defs>
+    <linearGradient id="tk-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7efe0"/>
+      <stop offset="1" stop-color="#ecdfc6"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#tk-sky)"/>
+  <circle cx="648" cy="196" r="112" fill="#ff5a3c" opacity="0.14"/>
+  <circle cx="648" cy="196" r="74" fill="#ff5a3c"/>
+  <path d="M0 336 L118 252 L236 326 L368 240 L502 330 L622 264 L758 332 L884 272 L960 328 L960 600 L0 600 Z" fill="#b7c2cf"/>
+  <path d="M100 266 L118 252 L138 266 L128 262 L118 266 L108 262 Z" fill="#faf6ec"/>
+  <path d="M348 256 L368 240 L390 256 L378 252 L368 257 L356 252 Z" fill="#faf6ec"/>
+  <path d="M602 278 L622 264 L644 278 L632 274 L622 279 L610 274 Z" fill="#faf6ec"/>
+  <path d="M862 286 L884 272 L906 286 L894 282 L884 287 L872 282 Z" fill="#faf6ec"/>
+  <path d="M0 424 L146 318 L282 414 L424 330 L566 418 L706 342 L846 418 L960 352 L960 600 L0 600 Z" fill="#8496ab"/>
+  <path d="M124 340 L146 318 L170 340 L156 334 L146 341 L134 334 Z" fill="#faf6ec"/>
+  <path d="M400 354 L424 330 L450 354 L436 348 L424 355 L410 348 Z" fill="#faf6ec"/>
+  <path d="M684 364 L706 342 L730 364 L716 358 L706 365 L694 358 Z" fill="#faf6ec"/>
+  <rect x="0" y="386" width="960" height="24" rx="12" fill="#f6f1e6" opacity="0.5"/>
+  <rect x="90" y="452" width="780" height="20" rx="10" fill="#f6f1e6" opacity="0.38"/>
+  <path d="M0 600 L0 502 L172 424 L338 508 L512 434 L694 512 L856 448 L960 498 L960 600 Z" fill="#2e3d51"/>
+  <g fill="#1d2938">
+    <path d="M126 470 L140 434 L154 470 Z M129 450 L140 422 L151 450 Z"/>
+    <rect x="138" y="470" width="4" height="9"/>
+    <path d="M188 486 L202 450 L216 486 Z M191 466 L202 438 L213 466 Z"/>
+    <rect x="200" y="486" width="4" height="9"/>
+    <path d="M292 508 L306 472 L320 508 Z M295 488 L306 460 L317 488 Z"/>
+    <rect x="304" y="508" width="4" height="9"/>
+    <path d="M468 462 L482 426 L496 462 Z M471 442 L482 414 L493 442 Z"/>
+    <rect x="480" y="462" width="4" height="9"/>
+    <path d="M648 512 L662 476 L676 512 Z M651 492 L662 464 L673 492 Z"/>
+    <rect x="660" y="512" width="4" height="9"/>
+    <path d="M888 486 L902 450 L916 486 Z M891 466 L902 438 L913 466 Z"/>
+    <rect x="900" y="486" width="4" height="9"/>
+  </g>
+  <g stroke="#2e3d51" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M300 176 q9 -9 18 0"/>
+    <path d="M322 190 q9 -9 18 0"/>
+  </g>
+  <text x="60" y="76" font-family="Georgia, serif" font-style="italic" font-size="21" fill="#2e3d51" opacity="0.55">TAIHANG, WINTER · 2026</text>
+</svg>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>谢俊彬 · 个人作品集</title>
+  <meta name="description" content="谢俊彬的个人作品集——风光摄影与前端开发作品">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="%23ff5a3c"/><text x="50" y="68" font-size="50" text-anchor="middle" fill="%23faf7f2" font-family="Georgia">X</text></svg>'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- ============ 左侧栏：个人介绍 / 技能 / 导航（桌面端固定） ============ -->
+    <aside class="sidebar">
+      <header class="profile">
+        <div class="avatar"><img src="images/avatar.svg" alt="谢俊彬的头像" width="72" height="72"></div>
+        <div class="profile-text">
+          <h1 class="name">谢俊彬</h1>
+          <p class="role">软件工程（数字媒体方向）· 在读</p>
+        </div>
+        <p class="bio">广州软件学院在读，退役军人。用镜头记录山野光影，也用代码把想法做成看得见的东西。</p>
+      </header>
+
+      <section class="skills" aria-label="技能方向">
+        <h2 class="side-title">技能方向</h2>
+        <div id="skillGroups" class="skill-groups"></div>
+      </section>
+
+      <nav class="nav" id="nav" aria-label="页面导航">
+        <a href="#works" data-target="works"><span class="nav-num">01</span>作品</a>
+        <a href="#about" data-target="about"><span class="nav-num">02</span>关于</a>
+        <a href="#contact" data-target="contact"><span class="nav-num">03</span>联系</a>
+      </nav>
+
+      <footer class="side-foot">
+        <a class="side-link" href="mailto:liming2026@163.com">Email ↗</a>
+      </footer>
+    </aside>
+
+    <!-- ============ 右侧主区：随滚动浏览 ============ -->
+    <main class="main">
+
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <p class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>PORTFOLIO · 2026</p>
+        <h2 class="hero-title">把光影与想法，<br>做成<em>看得见</em>的作品。</h2>
+        <p class="hero-sub">你好，我是谢俊彬——软件工程在读，方向是风光摄影与前端 / AI 辅助应用开发。这里收录我的摄影系列与开发作品。</p>
+        <a class="hero-hint" href="#works">向下浏览 <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <!-- 精选作品 -->
+      <section class="works" id="works">
+        <header class="section-head reveal">
+          <span class="section-num" aria-hidden="true">01</span>
+          <div>
+            <h2 class="section-title">精选作品</h2>
+            <p class="section-sub">SELECTED WORKS</p>
+          </div>
+        </header>
+        <div class="project-list" id="projectList"></div>
+      </section>
+
+      <!-- 关于我 -->
+      <section class="about" id="about">
+        <header class="section-head reveal">
+          <span class="section-num" aria-hidden="true">02</span>
+          <div>
+            <h2 class="section-title">关于我</h2>
+            <p class="section-sub">ABOUT ME</p>
+          </div>
+        </header>
+        <div class="about-grid">
+          <blockquote class="about-lead">
+            我是谢俊彬，广州软件学院软件工程（数字媒体方向）在读，<em>退役军人</em>。一边用手机记录山野的<em>光影与层次</em>，一边写代码把审美落地成页面——摄影教会我看氛围，前端让我把想法做成看得见的东西。
+          </blockquote>
+          <dl class="about-facts" id="aboutFacts"></dl>
+        </div>
+      </section>
+
+      <!-- 联系方式 -->
+      <section class="contact" id="contact">
+        <header class="section-head reveal">
+          <span class="section-num" aria-hidden="true">03</span>
+          <div>
+            <h2 class="section-title">联系方式</h2>
+            <p class="section-sub">GET IN TOUCH</p>
+          </div>
+        </header>
+        <p class="contact-lead">想交流风光摄影，或有开发合作意向，欢迎随时联系。</p>
+        <a class="contact-mail" href="mailto:liming2026@163.com">liming2026@163.com</a>
+        <div class="contact-rows">
+          <p><span>坐标</span>广州从化</p>
+          <p><span>学校</span>广州软件学院 · 软件工程（数字媒体方向）</p>
+          <p><span>状态</span>在读 · 退役军人</p>
+        </div>
+      </section>
+
+      <footer class="footer">© 2026 谢俊彬 · 使用原生 HTML / CSS / JavaScript 构建</footer>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
