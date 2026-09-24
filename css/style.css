@@ -355,6 +355,62 @@ ul { list-style: none; }
   .project:nth-child(even) .project-media::after { left: auto; right: 16px; }
 }
 
+/* ---------- 深浅色主题切换 ---------- */
+/* 浅色为默认（:root 变量）；深色通过 <html data-theme="dark"> 覆盖变量实现 */
+
+/* 主题切换时主区域颜色平滑过渡 */
+body, .sidebar {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 深色主题变量：延续暖色调，把“纸感”翻转为“暖夜” */
+:root[data-theme="dark"] {
+  --bg: #171512;            /* 暖夜主背景 */
+  --bg-side: #1f1c18;       /* 侧栏底色（亮一档） */
+  --ink: #ece7dc;           /* 暖白文字 */
+  --ink-soft: #b3ac9d;      /* 次级文字 */
+  --ink-faint: #827a6c;     /* 弱化文字 */
+  --line: #34302a;          /* 分割线 */
+  --accent: #ff6b4d;        /* 强调橙红（深色下略提亮） */
+  --accent-ink: #ff8a6b;    /* 强调色（小字号提亮版，保证对比度） */
+  --accent-soft: rgba(255, 107, 77, 0.2);
+}
+
+/* 深色下：原本固定浅色底的元素改为暗色底 */
+[data-theme="dark"] .avatar { border-color: #37322b; }
+[data-theme="dark"] .skill-tags li { background: rgba(255, 255, 255, 0.06); }
+[data-theme="dark"] .nav a:hover { background: rgba(255, 255, 255, 0.08); }
+[data-theme="dark"] .project-stack li { background: rgba(255, 255, 255, 0.07); }
+
+/* 深色下：提亮三个类别胶囊的文字与底色，保证对比度 */
+[data-theme="dark"] .cat-b { color: #4ecdbf; background: rgba(15, 155, 142, 0.22); }
+[data-theme="dark"] .cat-c { color: #9a9af0; background: rgba(91, 91, 214, 0.26); }
+[data-theme="dark"] .cat-d { color: #f07ab4; background: rgba(214, 70, 142, 0.24); }
+
+/* 主题切换按钮：固定右上角的圆形小按钮 */
+.theme-toggle {
+  position: fixed;
+  top: 18px; right: 18px;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--bg-side);
+  color: var(--ink-soft);
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(33, 30, 25, 0.14);
+  transition: color 0.2s, border-color 0.2s, background-color 0.3s ease;
+}
+.theme-toggle:hover { color: var(--accent-ink); border-color: var(--accent); }
+
+/* 图标随主题切换：浅色显月亮，深色显太阳 */
+.theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
 /* ---------- 移动端 ≤960px：上下布局 + 底部胶囊导航 ---------- */
 @media (max-width: 960px) {
   .page { display: block; }

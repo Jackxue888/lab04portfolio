@@ -117,8 +117,40 @@ function setupScrollSpy() {
   update();
 }
 
+/* ---------- 深浅色主题切换 ---------- */
+
+const THEME_KEY = "theme"; // localStorage 存储键名
+
+/* 应用主题：在 <html> 上设置 data-theme 属性，CSS 变量随之切换 */
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+}
+
+/* 初始化主题：优先读取 localStorage，其次跟随系统深色偏好 */
+function initTheme() {
+  let saved = null;
+  try { saved = localStorage.getItem(THEME_KEY); } catch (e) { /* 隐私模式等场景读取失败则忽略 */ }
+  const theme = (saved === "light" || saved === "dark")
+    ? saved
+    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  applyTheme(theme);
+}
+
+/* 绑定切换按钮：点击在两种主题间切换，并把选择保存到 localStorage */
+function setupThemeToggle() {
+  const btn = document.getElementById("themeToggle");
+  if (!btn) return;
+  btn.addEventListener("click", function () {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* 保存失败不影响本次切换 */ }
+  });
+}
+
 renderSkills();
 renderFacts();
 renderProjects();
 setupReveal();
 setupScrollSpy();
+initTheme();
+setupThemeToggle();
